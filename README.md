@@ -7,7 +7,9 @@ Node.js 18+ and a Google AI API key.
 
 ## Install
 ```bash
-npm install @npmstock/openwork
+npm install -g @npmstock/openwork
+or
+npm i -g @npmstock/openwork
 ```
 
 ## API key
