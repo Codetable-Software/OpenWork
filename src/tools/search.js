@@ -1,0 +1,1 @@
+async function search({query}){const r=await fetch(`https://api.duckduckgo.com/?q=${encodeURIComponent(query)}&format=json&no_html=1`);const d=await r.json();return {ok:r.ok,output:d.AbstractText||'No instant-answer result.'};} module.exports={search};

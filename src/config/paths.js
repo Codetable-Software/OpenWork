@@ -1,0 +1,1 @@
+const os=require('node:os'),path=require('node:path'); function getConfigDirectory(){return path.join(process.env.XDG_CONFIG_HOME||path.join(os.homedir(),'.config'),'openwork');} module.exports={getConfigDirectory};

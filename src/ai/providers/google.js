@@ -1,0 +1,3 @@
+const BASE='https://generativelanguage.googleapis.com/v1beta/models';
+async function request({apiKey,model,contents,tools=[]}){const r=await fetch(`${BASE}/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(apiKey)}`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({contents,...(tools.length?{tools:[{functionDeclarations:tools}]}:{})})});const d=await r.json().catch(()=>({}));if(!r.ok)throw new Error(d?.error?.message||`Google AI HTTP ${r.status}`);const parts=d?.candidates?.[0]?.content?.parts||[];return {raw:d,candidate:d.candidates[0],text:parts.filter(p=>p.text).map(p=>p.text).join(''),functionCalls:parts.filter(p=>p.functionCall).map(p=>p.functionCall)};}
+module.exports={request};

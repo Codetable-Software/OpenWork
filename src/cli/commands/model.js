@@ -1,0 +1,2 @@
+const {listModels,getModelId}=require('../../ai/models'); const {getConfig,setConfigValue}=require('../../config/manager');
+function run(a){if(!a[0]||a[0]==='current')return console.log(getConfig().model);if(a[0]==='list')return listModels().forEach(m=>console.log(`${m.alias.padEnd(14)} ${m.id}  ${m.family}`));if(a[0]==='set'){const id=getModelId(a[1]);setConfigValue('model',id);return console.log(`Model set to ${id}`);}throw new Error('Usage: work model list|current|set <model>');} module.exports={run};

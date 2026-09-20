@@ -1,0 +1,1 @@
+const readline=require('node:readline'); function question(prompt){const r=readline.createInterface({input:process.stdin,output:process.stdout});return new Promise(x=>r.question(prompt,a=>{r.close();x(a);}));} module.exports={question};

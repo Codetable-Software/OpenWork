@@ -1,0 +1,2 @@
+function showHelp() { console.log(`\nOpenWork — AI Chat & Agent CLI\n\nUsage:\n  work <command> [options]\n\nCommands:\n  chat                         Interactive AI chat\n  agent <task>                 Run an AI agent\n  config get|set|path          Manage configuration\n  model list|current|set       Manage models\n  tools                        List agent tools\n  help                         Show help\n`); }
+module.exports = { showHelp };

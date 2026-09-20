@@ -1,0 +1,1 @@
+{"name":"@npmstock/openwork","version":"1.0.0","description":"OpenWork AI Chat and Agent CLI","main":"src/cli/index.js","bin":{"work":"bin/work.js"},"scripts":{"start":"node bin/work.js","help":"node bin/work.js help"},"engines":{"node":">=18.0.0"},"license":"MIT"}

@@ -1,0 +1,1 @@
+const {exec}=require('./terminal'); async function status(){return exec({command:'git status --short --branch'});} async function diff(){return exec({command:'git diff --no-ext-diff --unified=3'});} module.exports={status,diff};

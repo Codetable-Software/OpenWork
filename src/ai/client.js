@@ -1,0 +1,1 @@
+const {request}=require('./providers/google'); function createClient({apiKey,model,tools=[]}){if(!apiKey)throw new Error('Google AI API key is not configured. Run: work config set api-key YOUR_API_KEY');return {model,generate:o=>request({apiKey,model,contents:o,tools})};} module.exports={createClient};

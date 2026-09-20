@@ -1,0 +1,1 @@
+async function fetchUrl({url}){const u=new URL(url);if(!['http:','https:'].includes(u.protocol))throw new Error('Only HTTP/HTTPS URLs are supported.');const r=await fetch(u);return {ok:r.ok,output:`HTTP ${r.status}\n\n${(await r.text()).slice(0,100000)}`};} module.exports={fetchUrl};
